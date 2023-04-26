@@ -21,7 +21,7 @@ export default function App() {
 
   useEffect(() => {
     getCounties();
-  });
+  }, []);
   const [score, setScore] = useState({
     percentage: 0,
     colour: "hsl(0, 0%, 0%)",
