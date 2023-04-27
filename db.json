@@ -49,6 +49,256 @@
             "median_income": 80000,
             "unemployment": 4.2,
             "state": "Florida"
+        },
+        {
+            "id": 6,
+            "name": "Maricopa",
+            "score": 79,
+            "median_wage": 55000,
+            "tax_rate": 0.08,
+            "median_income": 65000,
+            "unemployment": 5.3,
+            "state": "Arizona"
+        },
+        {
+            "id": 7,
+            "name": "Fulton",
+            "score": 85,
+            "median_wage": 62000,
+            "tax_rate": 0.09,
+            "median_income": 75000,
+            "unemployment": 4.9,
+            "state": "Georgia"
+        },
+        {
+            "id": 8,
+            "name": "Denver",
+            "score": 73,
+            "median_wage": 58000,
+            "tax_rate": 0.078,
+            "median_income": 70000,
+            "unemployment": 5.8,
+            "state": "Colorado"
+        },
+        {
+            "id": 9,
+            "name": "San Francisco",
+            "score": 92,
+            "median_wage": 85000,
+            "tax_rate": 0.103,
+            "median_income": 100000,
+            "unemployment": 3.5,
+            "state": "California"
+        },
+        {
+            "id": 10,
+            "name": "Charleston",
+            "score": 79,
+            "median_wage": 56000,
+            "tax_rate": 0.085,
+            "median_income": 68000,
+            "unemployment": 4.5,
+            "state": "South Carolina"
+        },
+        {
+            "id": 11,
+            "name": "King",
+            "score": 77,
+            "median_wage": 54000,
+            "tax_rate": 0.082,
+            "median_income": 65000,
+            "unemployment": 5.2,
+            "state": "Washington"
+        },
+        {
+            "id": 12,
+            "name": "Mecklenburg",
+            "score": 83,
+            "median_wage": 61000,
+            "tax_rate": 0.077,
+            "median_income": 74000,
+            "unemployment": 4.8,
+            "state": "North Carolina"
+        },
+        {
+            "id": 13,
+            "name": "Montgomery",
+            "score": 71,
+            "median_wage": 50000,
+            "tax_rate": 0.075,
+            "median_income": 60000,
+            "unemployment": 6.3,
+            "state": "Maryland"
+        },
+        {
+            "id": 14,
+            "name": "Travis",
+            "score": 88,
+            "median_wage": 65000,
+            "tax_rate": 0.083,
+            "median_income": 80000,
+            "unemployment": 3.9,
+            "state": "Texas"
+        },
+        {
+            "id": 15,
+            "name": "Bexar",
+            "score": 67,
+            "median_wage": 48000,
+            "tax_rate": 0.082,
+            "median_income": 58000,
+            "unemployment": 6.5,
+            "state": "Texas"
+        },
+        {
+            "id": 16,
+            "name": "Broward",
+            "score": 91,
+            "median_wage": 72000,
+            "tax_rate": 0.072,
+            "median_income": 88000,
+            "unemployment": 4.1,
+            "state": "Florida"
+        },
+        {
+            "id": 17,
+            "name": "San Diego",
+            "score": 84,
+            "median_wage": 61000,
+            "tax_rate": 0.082,
+            "median_income": 74000,
+            "unemployment": 4.5,
+            "state": "California"
+        },
+        {
+            "id": 18,
+            "name": "Orange",
+            "score": 85,
+            "median_wage": 65000,
+            "tax_rate": 0.079,
+            "median_income": 78000,
+            "unemployment": 4.2,
+            "state": "California"
+        },
+        {
+            "id": 19,
+            "name": "Jefferson",
+            "score": 78,
+            "median_wage": 54000,
+            "tax_rate": 0.071,
+            "median_income": 66000,
+            "unemployment": 5.8,
+            "state": "Kentucky"
+        },
+        {
+            "id": 20,
+            "name": "Weld",
+            "score": 67,
+            "median_wage": 48000,
+            "tax_rate": 0.066,
+            "median_income": 58000,
+            "unemployment": 6.4,
+            "state": "Colorado"
+        },
+        {
+            "id": 21,
+            "name": "Caddo",
+            "score": 62,
+            "median_wage": 42000,
+            "tax_rate": 0.093,
+            "median_income": 49000,
+            "unemployment": 7.1,
+            "state": "Louisiana"
+        },
+        {
+            "id": 22,
+            "name": "Suffolk",
+            "score": 81,
+            "median_wage": 59000,
+            "tax_rate": 0.076,
+            "median_income": 71000,
+            "unemployment": 4.3,
+            "state": "New York"
+        },
+        {
+            "id": 23,
+            "name": "Hampden",
+            "score": 76,
+            "median_wage": 52000,
+            "tax_rate": 0.072,
+            "median_income": 63000,
+            "unemployment": 5.5,
+            "state": "Massachusetts"
+        },
+        {
+            "id": 24,
+            "name": "Hudson",
+            "score": 88,
+            "median_wage": 71000,
+            "tax_rate": 0.078,
+            "median_income": 86000,
+            "unemployment": 3.8,
+            "state": "New Jersey"
+        },
+        {
+            "id": 25,
+            "name": "St. Clair",
+            "score": 69,
+            "median_wage": 48000,
+            "tax_rate": 0.075,
+            "median_income": 57000,
+            "unemployment": 6.9,
+            "state": "Michigan"
+        },
+        {
+            "id": 26,
+            "name": "Polk",
+            "score": 72,
+            "median_wage": 51000,
+            "tax_rate": 0.079,
+            "median_income": 61000,
+            "unemployment": 5.8,
+            "state": "Iowa"
+        },
+        {
+            "id": 27,
+            "name": "Kauai",
+            "score": 76,
+            "median_wage": 54000,
+            "tax_rate": 0.047,
+            "median_income": 62000,
+            "unemployment": 4.2,
+            "state": "Hawaii"
+        },
+        {
+            "id": 28,
+            "name": "Guilford",
+            "score": 81,
+            "median_wage": 59000,
+            "tax_rate": 0.069,
+            "median_income": 72000,
+            "unemployment": 4.5,
+            "state": "North Carolina"
+        },
+        {
+            "id": 29,
+            "name": "Jackson",
+            "score": 62,
+            "median_wage": 42000,
+            "tax_rate": 0.082,
+            "median_income": 51000,
+            "unemployment": 7.6,
+            "state": "Alabama"
+        },
+        {
+            "id": 30,
+            "name": "Scott",
+            "score": 68,
+            "median_wage": 47000,
+            "tax_rate": 0.069,
+            "median_income": 55000,
+            "unemployment": 6.2,
+            "state": "Minnesota"
         }
     ]
 }
