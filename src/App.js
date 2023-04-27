@@ -21,10 +21,11 @@ export default function App() {
       console.log(error);
     }
   };
+  
+  const countiesSortedDescending = [...counties].sort((a, b) => b.score - a.score);
+  console.log(countiesSortedDescending);
 
   const {tableau} = window;
-
-  
 
   const ref = useRef(null);
   const url =  "https://public.tableau.com/views/Dashboard_HMEA/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
@@ -73,7 +74,7 @@ export default function App() {
         </header>
         <div className="data-container">
           <div class='counties-element-container'>
-            <Counties counties={counties} handleScore={handleScore} />
+            <Counties countiesSortedDescending={countiesSortedDescending} handleScore={handleScore} />
           </div>
           <div className="number-container">
             <Pie percentage={score.percentage} colour={score.colour} />

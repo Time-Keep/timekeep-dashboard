@@ -4,7 +4,7 @@ export default function Counties(props) {
 
   return (
     <div>
-      {props.counties.slice(0,5).map((county) => {
+      {props.countiesSortedDescending.slice(0,5).map((county) => {
         return (
           <div key={county.id} className="county-container">
             <button
@@ -17,7 +17,7 @@ export default function Counties(props) {
 
             <p className="hidden">Over Score: {county.score}</p>
             <p >Median Wage: {county.median_wage}</p>
-            <p >Tax Rate: {county.tax_rate * 100}%</p>
+            <p >Tax Rate: {parseFloat(county.tax_rate * 100).toFixed(2)}%</p>
             <p >Median Income: {county.median_income}</p>
             <p >
               Unemployment percentage: {county.unemployment}%
