@@ -1,15 +1,18 @@
 export default function Counties(props) {
+
+
+
   return (
     <div>
       {props.counties.map((county) => {
         return (
-          <div key={county.id} className="card-body">
+          <div key={county.id} className="county-container">
             <button
               onClick={(e) => {
                 props.handleScore(e, county.score);
               }}
             >
-              <h5 className="card-title">County Name: {county.name}</h5>
+              <h3>{county.name}</h3>
             </button>
 
             <p className="hidden">Over Score: {county.score}</p>
@@ -26,3 +29,4 @@ export default function Counties(props) {
     </div>
   );
 }
+
