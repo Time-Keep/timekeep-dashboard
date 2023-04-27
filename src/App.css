@@ -178,6 +178,10 @@ button:hover {
 }
 .county-container {
   color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
 }
 .counties-element-container {
   margin-right: 1rem;
@@ -185,6 +189,8 @@ button:hover {
   background-color: #d2f3ff;
 
 }
+
+
 
 .nav-container {
   text-align: center;
