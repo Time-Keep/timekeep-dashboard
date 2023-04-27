@@ -1,8 +1,9 @@
 import "./App.css";
 import Pie from "./components/Pie";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Counties from "./components/Counties";
+// import { Dashboard } from "./components/Dashboard";
 
 
 export default function App() {
@@ -21,8 +22,26 @@ export default function App() {
     }
   };
 
+  const {tableau} = window;
+
+  
+
+  const ref = useRef(null);
+  const url =  "https://public.tableau.com/views/Dashboard_HMEA/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
+  function initViz(){
+    let viz = window.tableau.VizManager.getVizs()[0];
+
+        if (viz) {
+
+            viz.dispose();
+
+        }
+    new tableau.Viz(ref.current,url);
+  }
+
   useEffect(() => {
     getCounties();
+    initViz();
   }, []);
 
   const [score, setScore] = useState({
@@ -38,12 +57,14 @@ export default function App() {
       colour: `hsl(${rand(360)}, ${rand(50) + 50}%, ${rand(30) + 20}%)`,
     });
   };
+  
+  
 
 
   return (
     <>
     <section className="nav-container">
-        <h1>Company INC.</h1>
+        <h1>Dynamic Data</h1>
     </section>
     <section className="main-dashboard">
       <div className="main-dashboard-container">
@@ -61,6 +82,15 @@ export default function App() {
         </div>
       </div>
     </section>
+        <div ref={ref} style={{width:'70%', margin:'auto'}}> </div>
+    <section>
+      <div>
+      </div>
+
+    </section>
     </>
   );
 }
+
+
+
