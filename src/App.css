@@ -2,12 +2,30 @@
 
 body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%237C909A' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+
+  --color-primary: #1c4e80;
+  --color-secondary: #7c909a;
+  --color-accent: #ea6947;
+  --color-neutral: #23282e;
+  --color-base-100: #202020;
+  --color-info: #0091d5;
+  --color-success: #6bb187;
+  --color-warning: #dbae59;
+  --color-error: #ac3e31;
 }
 
-h1 {
-  color: #d2f3ff;
-  font-size: 30px;
-  font-weight: 900;
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
 }
 
 /* -------- Utility -------- */
@@ -18,21 +36,7 @@ circle {
   transition: all 0.7s ease-in-out;
 }
 
-button {
-  padding: 1em;
-  font-size: 1rem;
-  border: none;
-  background-color: #dddddd;
-  border-radius: 0.3rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #4d4d4d;
-  color: white;
-}
-
-.main-dashboard {
+.overview-wrapper {
   width: 100%;
   margin: 0;
   display: flex;
@@ -40,23 +44,17 @@ button:hover {
   justify-content: center;
 }
 
-.main-dashboard-container {
+.overview-container {
   width: 90%;
-  background-color: #1d4f62;
+  max-width: 56rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 2rem;
-  box-shadow: 3px 3px 10px #797878;
-  border-radius: 5px;
-  border: 1px solid #1d4f62;
 }
 
 .data-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  border-radius: 5px;
-  color: #1d4f62;
-  margin-top: 1rem;
 }
 
 .number-container {
@@ -64,13 +62,6 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  color: #f1f1e6;
-  background-color: #d2f3ff;
-}
-
-svg text {
-  color: #f1f1e6 !important;
 }
 
 .number-container h1 {
@@ -79,41 +70,20 @@ svg text {
   padding: 3rem;
 }
 
+.pie-percent {
+  color: var(--color-accent);
+}
+
+.left-stat {
+  width: 6rem;
+}
+
 .hidden {
   display: none;
 }
 
-button {
-  border: none;
-  padding: 1rem;
-  background-color: transparent;
-  width: 250px;
-  height: 80px;
-  text-align: start;
-  color: black;
-}
-
-button h5 {
-  margin: 0;
-}
-
-button:hover {
-  background-color: transparent;
-  text-decoration: underline;
-  color: black;
-}
-
-.county-container {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.counties-element-container {
+.counties-card {
   margin-right: 1rem;
-  border-radius: 5px;
-  background-color: #d2f3ff;
 }
 
 .nav-container {

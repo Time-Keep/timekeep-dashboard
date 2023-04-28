@@ -1,9 +1,7 @@
 import "./App.css";
-import Pie from "./components/Pie";
 import React, { useState, useEffect, useRef } from "react";
-import axios from "axios";
-import Counties from "./components/Counties";
 import NavBar from "./components/Navbar";
+import Overview from "./components/Overview";
 
 export default function App() {
   const API_URI = "http://localhost:5555/counties";
@@ -13,34 +11,21 @@ export default function App() {
     colour: "hsl(0, 0%, 0%)",
   });
 
-  const { tableau } = window;
-
   useEffect(() => {
     getCounties();
     initViz();
   }, []);
 
-  const getCounties = async () => {
-    try {
-      const fetchData = await axios.get(API_URI, {
-        headers: {
-          authorization: "Bearer JWT Token",
-        },
-      });
-      setCounties(fetchData.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const countiesSortedDescending = [...counties].sort(
-    (a, b) => b.score - a.score
-  );
-
+  const { tableau } = window;
   const ref = useRef(null);
   const url =
     "https://public.tableau.com/views/Dashboard_HMEA/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
+
   function initViz() {
+    if (!window) {
+      return;
+    }
+
     let viz = window.tableau.VizManager.getVizs()[0];
 
     if (viz) {
@@ -48,6 +33,25 @@ export default function App() {
     }
     new tableau.Viz(ref.current, url);
   }
+
+  const getCounties = async () => {
+    try {
+      const response = await fetch(API_URI, {
+        headers: {
+          authorization: "Bearer JWT Token",
+        },
+      });
+
+      const countyData = response.data;
+      const countiesSortedDescending = [...countyData].sort(
+        (a, b) => b.score - a.score
+      );
+
+      setCounties(countiesSortedDescending);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleScore = (e, score) => {
     e.preventDefault();
@@ -61,24 +65,7 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <section className="main-dashboard">
-        <div className="main-dashboard-container">
-          <header>
-            <h1>Dashboard</h1>
-          </header>
-          <div className="data-container">
-            <div class="counties-element-container">
-              <Counties
-                countiesSortedDescending={countiesSortedDescending}
-                handleScore={handleScore}
-              />
-            </div>
-            <div className="number-container">
-              <Pie percentage={score.percentage} colour={score.colour} />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Overview handleScore={handleScore} score={score} counties={counties} />
       <div ref={ref} style={{ width: "70%", margin: "auto" }}>
         {" "}
       </div>
