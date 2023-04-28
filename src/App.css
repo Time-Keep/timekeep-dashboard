@@ -46,7 +46,7 @@ circle {
 
 .overview-container {
   width: 90%;
-  max-width: 56rem;
+  max-width: 62rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 2rem;
@@ -84,6 +84,7 @@ circle {
 
 .counties-card {
   margin-right: 1rem;
+  padding: 1rem;
 }
 
 .nav-container {

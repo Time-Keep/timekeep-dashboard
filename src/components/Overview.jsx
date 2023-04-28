@@ -4,7 +4,7 @@ import Pie from "./Pie";
 export default function Overview({ handleScore, score, counties }) {
   return (
     <div className="[ overview-wrapper ]">
-      <div className="[ card w-96 bg-neutral text-neutral-content shadow-xl ][ overview-container ]">
+      <div className="[ card-bordered w-96 bg-neutral text-neutral-content shadow-xl ][ overview-container ]">
         <div className="[ bg-neutral text ][ data-container ]">
           <Counties counties={counties} handleScore={handleScore} />
 

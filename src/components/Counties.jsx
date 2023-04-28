@@ -63,7 +63,7 @@ export default function Counties(props) {
             onMouseEnter={(e) => {
               props.handleScore(e, county.score);
             }}
-            className="[ stats shadow ]"
+            className="[ stats shadow ][ stat-line ]"
           >
             <section className="[ stat ][ left-stat ]">
               <div className="[ stat-desc ]">
