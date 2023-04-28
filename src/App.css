@@ -84,6 +84,24 @@ select {
   }
 }
 
+/* // Composition // */
+
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(1rem);
+}
+
+.with-sidebar > :first-child {
+  flex-grow: 1;
+}
+
+.with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
 /* // Block level styles // */
 
 circle {
@@ -131,7 +149,6 @@ button:hover {
   margin-top: 1rem;
 }
 
-
 .number-container {
   display: flex;
   flex-direction: row;
@@ -144,7 +161,6 @@ button:hover {
 
 svg text {
   color: #f1f1e6 !important;
-
 }
 
 .number-container h1 {
@@ -165,8 +181,6 @@ button {
   height: 80px;
   text-align: start;
   color: black;
-
-
 }
 button h5 {
   margin: 0;
@@ -181,16 +195,12 @@ button:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
 }
 .counties-element-container {
   margin-right: 1rem;
   border-radius: 5px;
   background-color: #d2f3ff;
-
 }
-
-
 
 .nav-container {
   text-align: center;
@@ -199,6 +209,6 @@ button:hover {
 }
 .nav-container h1 {
   color: #d2f3ff;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
