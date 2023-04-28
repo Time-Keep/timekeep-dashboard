@@ -98,3 +98,8 @@ circle {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
+.title {
+  max-width: 85%;
+  margin: auto;
+}
