@@ -1,3 +1,5 @@
+/* -------- CSS Resets -------- */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -84,25 +86,9 @@ select {
   }
 }
 
-/* // Composition // */
+/* -------- Composition -------- */
 
-.with-sidebar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(1rem);
-}
-
-.with-sidebar > :first-child {
-  flex-grow: 1;
-}
-
-.with-sidebar > :last-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-inline-size: 50%;
-}
-
-/* // Block level styles // */
+/* -------- Block -------- */
 
 circle {
   transition: all 0.7s ease-in-out;
@@ -182,20 +168,24 @@ button {
   text-align: start;
   color: black;
 }
+
 button h5 {
   margin: 0;
 }
+
 button:hover {
   background-color: transparent;
   text-decoration: underline;
   color: black;
 }
+
 .county-container {
   color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .counties-element-container {
   margin-right: 1rem;
   border-radius: 5px;
@@ -207,6 +197,7 @@ button:hover {
   background-color: #1d4f62;
   color: #f1f1e6;
 }
+
 .nav-container h1 {
   color: #d2f3ff;
   padding-top: 0.5rem;
