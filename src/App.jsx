@@ -3,10 +3,23 @@ import Pie from "./components/Pie";
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Counties from "./components/Counties";
+import NavBar from "./components/Navbar";
 
 export default function App() {
   const API_URI = "http://localhost:5555/counties";
   const [counties, setCounties] = useState([]);
+  const [score, setScore] = useState({
+    percentage: 0,
+    colour: "hsl(0, 0%, 0%)",
+  });
+
+  const { tableau } = window;
+
+  useEffect(() => {
+    getCounties();
+    initViz();
+  }, []);
+
   const getCounties = async () => {
     try {
       const fetchData = await axios.get(API_URI, {
@@ -23,9 +36,6 @@ export default function App() {
   const countiesSortedDescending = [...counties].sort(
     (a, b) => b.score - a.score
   );
-  console.log(countiesSortedDescending);
-
-  const { tableau } = window;
 
   const ref = useRef(null);
   const url =
@@ -39,16 +49,6 @@ export default function App() {
     new tableau.Viz(ref.current, url);
   }
 
-  useEffect(() => {
-    getCounties();
-    initViz();
-  }, []);
-
-  const [score, setScore] = useState({
-    percentage: 0,
-    colour: "hsl(0, 0%, 0%)",
-  });
-
   const handleScore = (e, score) => {
     e.preventDefault();
     const rand = (n) => Math.random() * n;
@@ -60,9 +60,7 @@ export default function App() {
 
   return (
     <>
-      <section className="nav-container">
-        <h1>Dynamic Data</h1>
-      </section>
+      <NavBar />
       <section className="main-dashboard">
         <div className="main-dashboard-container">
           <header>
