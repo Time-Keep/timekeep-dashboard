@@ -3,13 +3,15 @@ import React from "react";
 const Pie = ({ percentage, colour }) => {
   const pct = cleanPercentage(percentage);
   return (
-    <svg width={200} height={200}>
-      <g transform={`rotate(-90 ${"100 100"})`}>
-        <Circle colour="lightgrey" />
-        <Circle colour={colour} pct={pct} />
-      </g>
-      <Text percentage={pct} />
-    </svg>
+    <div className="[ card bg-base-100 ][ number-container ]">
+      <svg width={200} height={200}>
+        <g transform={`rotate(-90 ${"100 100"})`}>
+          <Circle colour="grey" />
+          <Circle colour={colour} pct={pct} />
+        </g>
+        <Text percentage={pct} />
+      </svg>
+    </div>
   );
 };
 
@@ -41,11 +43,13 @@ const Circle = ({ colour, pct }) => {
 const Text = ({ percentage }) => {
   return (
     <text
+      className="Pie-percent"
       x="50%"
       y="50%"
       dominantBaseline="central"
       textAnchor="middle"
       fontSize={"1.5em"}
+      fill="lightgray"
     >
       {percentage.toFixed(0)}%
     </text>
